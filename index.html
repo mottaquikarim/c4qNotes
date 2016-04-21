@@ -1,0 +1,389 @@
+<!doctype html>
+<html>
+<head>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0;'>
+    <meta charset="UTF-8">
+    <title>Introduction to Programming With JavaScript</title>
+
+    <link href='styles/libs/fonts.css' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet' href='styles/semantic.min.css'>
+    <link rel="stylesheet" href="styles/libs/monokai.min.css">
+    <link rel='stylesheet' href='styles/main.css'>
+</head>
+<body id="book">
+    <div class="book-wrap">
+        <div class="book-wrap__inner">
+
+            <div class="book__col">
+                <div class="book__colwrap ui menu inverted vertical">
+                    <div class="item colheader colitem">
+                        <h1 class="title colheader__title">Introduction to Programming With JavaScript</h1>
+                        <br>
+                        <div class="description">An introduction to programming basics.</div>
+                        <br>
+                    </div>
+                    <div class="item item__active">
+                        <b class="header"><a href="#memory">Memory</a></b>
+                    </div>
+                    <div class="item item__active">
+                        <b class="header"><a href="#variables">Variables</a></b>
+                    </div>
+                    <div class="item item__active">
+                        <b class="header"><a href="#control-flow">Control Flow</a></b>
+                    </div>
+
+                    <div class="item item__active">
+                        <b class="header"><a href="#functions">Functions</a></b>
+                    </div>
+                </div>
+            </div><!-- book__col -->
+
+            <div class="book__content">
+
+                    <div class="main-content js-content" style="padding-bottom: 100px;"><h1 id="intro-to-programming">Intro to Programming</h1>
+<hr>
+<p style="text-align:center;"><img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" alt="cat working"></p>
+<p>Hello! Welcome to <strong>Introduction to Programming</strong>. Today, we will learn about the basics of programming — the abcs if you will. </p>
+<h2 id="main-objective">Main Objective</h2>
+<hr>
+<p>We will write a simple program that will take a numerical grade value and return to us the corresponding alphabetical grade value.</p>
+<p>So for example,</p>
+<p>A grade of <strong>65</strong> will get us back an <strong>F</strong> but a grade of <strong>100</strong> will get us back an <strong>A</strong>.</p>
+<p>We will write this program in <strong>JavaScript</strong>.</p>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<hr>
+<p>In order to write the grade transforming program, we must first learn some fundamental but important aspects of programming. </p>
+<p>By the end of class today, we will walk away with a strong understanding of...</p>
+<h3 id="memory_">Memory</h3>
+<p>What the heck is computer memory anyways? How does it work?</p>
+<h3 id="variables_">Variables.</h3>
+<p>How can we tell the computer to "remember" stuff? We'll learn about variable types, operators, and how to access data.</p>
+<h3 id="control-flow_">Control flow.</h3>
+<p>How  can we incorporate decision making into our code? We'll discuss how to check for equality and comparison operators.</p>
+<h3 id="functions_">Functions</h3>
+<p>How can we package our code in such a way that it is generalized and reusable?</p>
+<h3 id="class-notes">Class Notes</h3>
+<h4 id="my-notes">My Notes</h4>
+<p>Class notes will show up here in real time. Click <a href="http://samantha.fewd.us/#broadcast/mottaquikarim/c4qNotes" target="_blank">here</a> to open in new tab.</p>
+<iframe src="http://samantha.fewd.us/#broadcast/mottaquikarim/c4qNotes"></iframe>
+
+<h4 id="your-notes">Your Notes</h4>
+<p>Click <a href="http://samantha.fewd.us/#fork/mottaquikarim/ClassNotes">here</a> to open up your own workspace for notes and exercises.</p>
+<p><img src="https://media.giphy.com/media/PuWNMebKGIKNG/giphy.gif" alt="let's do this"></p>
+<h2 id="memory">Memory</h2>
+<hr>
+<h3 id="definition">Definition</h3>
+<p>Think of memory as a series of folders in a very long filing cabinet. </p>
+<p><img src="http://49.media.tumblr.com/b0884082b2dba850ed1dcbcf6af381d7/tumblr_n29y3jemoX1rg0lgoo2_500.gif" alt="filing cabinet"></p>
+<p>Each file in our "cabinet" contains two pieces of important information.</p>
+<ol>
+<li><strong>the address</strong>: in our example the label of the file</li>
+<li><strong>the value</strong>: in our example, the "stuff" that is inside the file.</li>
+</ol>
+<h3 id="memory-address">Memory Address</h3>
+<p>Each "file" in our "cabinet" has a numerical position. The computer can use this numerical position to look up the information that you need.</p>
+<h3 id="memory-value">Memory Value</h3>
+<p>The memory value can be anything, some text, a number, a true or false flag, etc. This is also stored as a number, but our program can interpret this value and render for us text, numbers, etc.</p>
+<p>The question then becomes: <strong>how are these numbers, the address and the value, stored in memory?</strong></p>
+<h3 id="bits-and-bytes">Bits and Bytes</h3>
+<p>Everything that we store in a computer is represented as a bit or a byte. Let's explore how these quantities work before we move on with our memory discussion.</p>
+<h4 id="bits">BITS</h4>
+<ul>
+<li>The bit is the smallest unit of storage in a computer. </li>
+<li>The familiar 0s and 1s you see all over movies and stuff when people talk about computers are bits.</li>
+<li>A bit can <strong>only</strong> take the value of 0 or 1. </li>
+<li>One bit by itself isn't super useful -- but we can combine a series of bits and interpret the combinations as a way to do useful things.</li>
+</ul>
+<h4 id="bytes">BYTES</h4>
+<ul>
+<li>A byte is a series of 8 bits.</li>
+<li>We've heard the term byte a lot -- images are kilo<strong>bytes</strong>, our iphone's storage is usually measured in giga<strong>bytes</strong>, etc.</li>
+</ul>
+<h4 id="ok-great-but-what-_is_-a-byte-really-">Ok great, but what <em>is</em> a Byte, really?</h4>
+<p>It's a number. Bytes are numbers. Let's look at this real quick.</p>
+<p>If one bit contains 0 or 1, two bits can contain:</p>
+<p><strong>00, 01, 10, 11</strong></p>
+<p>By itself, a series of 1s and 0s are pretty lame. BUT. We can encode them like so.</p>
+<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">2</th>
+<th style="text-align:center">1</th>
+<th style="text-align:center">Math</th>
+<th style="text-align:center">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">(2)(<strong>0</strong>) + (1)(<strong>0</strong>)</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">(2)(<strong>0</strong>) + (1)(<strong>1</strong>)</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">(2)(<strong>1</strong>) + (1)(<strong>0</strong>)</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">(2)(<strong>1</strong>) + (1)(<strong>1</strong>)</td>
+<td style="text-align:center">3</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>And <strong>BOOM</strong>. We have numbers! Now 2 bits only gives us 4 possible numbers (0-3). </p>
+<p>If we were to tack on ONE more bit, we would have the following:</p>
+<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Number of Bits</th>
+<th style="text-align:center">Combinations</th>
+<th style="text-align:right">Values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1 bit</td>
+<td style="text-align:center">0, 1</td>
+<td style="text-align:right">0, 1</td>
+</tr>
+<tr>
+<td style="text-align:left">2 bits</td>
+<td style="text-align:center">00, 01, 10, 11</td>
+<td style="text-align:right">0, 1, 2, 3</td>
+</tr>
+<tr>
+<td style="text-align:left">3 bits</td>
+<td style="text-align:center">000, 001, 010, 011,100, 101, 110, 111</td>
+<td style="text-align:right">0,1,2,3,4,5,6,7</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="exercise-1-how-many-possible-numbers-can-we-get-with-eight-bits-or-as-we-know-it-one-byte-">Exercise 1: How many possible numbers can we get with eight bits (or, as we know it, ONE byte)?</h4>
+<p>This problem can be solved quickly but if you're stuck, feel free to use the table we have above.</p>
+<h3 id="how-bytes-are-used-in-memory">How Bytes are used in memory</h3>
+<p>Typically, our memory addresses are represented as bytes.</p>
+<p>Additionally, each "bucket" (or folder if we use our cabinet example) will contain up to one byte.</p>
+<p>Let's top this off with one final representation.</p>
+<pre><code class="lang-bash hljs">  Memory      Computer Address
+|-------|
+|       |            0
+|-------|
+|       |            1
+|-------|
+|       |            2
+|-------|
+|       |            3
+|-------|
+
+   ...
+
+|-------|
+|0000001|         0x11cedf
+|-------|
+|       |         0x11cee0 
+|-------|
+|       |         0x11cee1
+|-------|
+|       |         0x11cee2                     
+   ...
+</code></pre>
+<p>(Inspired by this <a href="http://www.cs.utah.edu/~germain/PPS/Topics/memory_layout.html">diagram</a>).</p>
+<p>This begs the question...how can we expect any reasonable person to remember that memory address <strong>0x11cedf</strong> represents value <strong>0000001</strong>?! </p>
+<h2 id="variables">Variables</h2>
+<hr>
+<p>We can't. This is why variables exist.</p>
+<h3 id="definition">Definition</h3>
+<p>A variable is a location in memory that contains a quantity of information called value and a symbolic name called identifier. </p>
+<p>Basically, we associated the memory address <strong>0x11cedf</strong> with a symbolic name, like <strong>superAwesomeVariable</strong>. This abstracts away the need for us to remember or in most cases, care about the memory address. We can let the our program's interpreter deal with that.</p>
+<p>Tying this back to memory and bytes, there are different <em>types</em> of variables. </p>
+<p>A <strong>character</strong> represents a single letter such as 'a' or 'b'. It is defined as one byte.</p>
+<p>A <strong>boolean</strong> represents true or false. It is also usually one byte.</p>
+<p>An <strong>integer</strong> represents a number. It is usually 4 bytes. (<strong>FYI</strong>: 4 bytes = 32 bits, so the max integer would be 2^32 - 1).</p>
+<p>And so on. </p>
+<h3 id="variable-types">Variable Types</h3>
+<p>Most languages have a concept of <strong>primitive types</strong> and <strong>composite types</strong>.</p>
+<h4 id="primitive-type">Primitive Type</h4>
+<p>Primitive types are basic building blocks for that <strong>language</strong>, kind of like bits are the basic building blocks for memory. You can use primitives to build composite type variables, which are made up of primitives.</p>
+<p>In javascript, there are <strong>5 primitives</strong>:</p>
+<ul>
+<li>undefined</li>
+<li>null</li>
+<li>boolean</li>
+<li>string</li>
+<li>number</li>
+</ul>
+<h4 id="composite-type">Composite Type</h4>
+<p>Composite types are variable types that can be made up of the primitive types. </p>
+<p>In javascript there are <strong>3 composites</strong>:</p>
+<ul>
+<li>objects</li>
+<li>arrays</li>
+<li>functions</li>
+</ul>
+<h4 id="exercise-2-describe-yourself-to-javascript-">Exercise 2: Describe yourself to javascript.</h4>
+<p>Create the following variables:</p>
+<ul>
+<li>myBirthYear (number)</li>
+<li>currentYearNow( number)</li>
+<li>amIAwesome (boolean)</li>
+<li>myFirstName (string)</li>
+<li>myLastName (string)</li>
+</ul>
+<h3 id="operators">Operators</h3>
+<p>Operators are symbols that represent an action you can do to a variable.</p>
+<p>Here are some examples of operators:</p>
+<ul>
+<li><code>+</code>, the addition operator</li>
+<li><code>-</code>, the subtraction operator</li>
+<li><code>*</code>, the multiplication operator</li>
+<li><code>/</code>, the division operator</li>
+<li><code>typeof</code>, the variable type querying operator</li>
+</ul>
+<p>There are a few others that we are neglecting, including the <strong>comparison operators</strong> which we will discuss in depth in the next section.</p>
+<h4 id="exercise-3-practice-with-operators">Exercise 3: Practice with operators</h4>
+<p>Calculate the following:</p>
+<ul>
+<li>myAge (calculated by subtracting the prev two)</li>
+<li>myFullName (created by combining myFirstName and myLastName)</li>
+</ul>
+<h4 id="exercise-4-create-a-var-that-will-hold-a-grade-value-">Exercise 4: Create a var that will hold a grade value.</h4>
+<p>Store it in the grades.js tab.</p>
+<h2 id="control-flow">Control Flow</h2>
+<hr>
+<h3 id="definition">Definition</h3>
+<p>Control flow is the order in which lines of code are executed in a function.</p>
+<p>A very important aspect of programming is the ability to <em>alter</em> the way lines of code are exectuted.</p>
+<p>A <strong>conditional statement</strong> is one way we can alter the way lines of code are executed. </p>
+<h3 id="how-conditional-statements-work">How conditional statements work</h3>
+<p>Conditional statements evaluate to true or false and based on this evaluation, allow or block certain commands from executing.</p>
+<p>For example:</p>
+<pre><code class="lang-javascript hljs"><span class="hljs-keyword">if</span> ( <span class="hljs-literal">true</span> ) {
+<span class="hljs-comment">// we write lines of code here</span>
+<span class="hljs-comment">// these lines will always execute</span>
+}
+
+<span class="hljs-keyword">if</span> ( <span class="hljs-literal">false</span> ) {
+<span class="hljs-comment">// we write lines of code here</span>
+<span class="hljs-comment">// these lines will never execute</span>
+}
+</code></pre>
+<h3 id="control-flow-operators">Control Flow Operators</h3>
+<p>We can enrich our conditional statements but applying the following comparison operators into the syntax.</p>
+<ol>
+<li><code>===</code>, equality operator</li>
+<li><code>!==</code>, inequality operator</li>
+<li><code>&gt;</code>, greater than operator</li>
+<li><code>&gt;=</code>, greater than or equal to operator</li>
+<li><code>&lt;</code>, less than operator</li>
+<li><code>&lt;=</code>, less than or equal to operator</li>
+</ol>
+<p>For example,</p>
+<pre><code class="lang-javascript hljs"><span class="hljs-keyword">var</span> foobar = <span class="hljs-string">'baz'</span>;
+<span class="hljs-keyword">if</span> ( foobar === <span class="hljs-string">'baz'</span> ) {
+<span class="hljs-comment">// will only execute if 'baz' is set</span>
+}
+</code></pre>
+<p>We also have logical operators:</p>
+<ol>
+<li><code>||</code>, the logical OR operator</li>
+<li><code>&amp;&amp;</code>, the logical AND operator</li>
+<li><code>!</code>, the logical NOT operator</li>
+</ol>
+<p>For example,</p>
+<pre><code class="lang-javascript hljs"><span class="hljs-keyword">var</span> num = <span class="hljs-number">0</span>;
+<span class="hljs-keyword">if</span> ( !num ) {
+<span class="hljs-comment">// will only execute if num is 0, since !0 gives us true</span>
+}
+</code></pre>
+<h3 id="compound-conditional-statements">Compound conditional statements</h3>
+<p>We can also chain our logic if necessary. We will demonstrate in examples:</p>
+<pre><code class="lang-javascript hljs"><span class="hljs-keyword">if</span> ( SOMETHING) {
+<span class="hljs-comment">// only if SOMETHING is true</span>
+}
+<span class="hljs-keyword">else</span> {
+<span class="hljs-comment">// all other cases</span>
+}
+</code></pre>
+<pre><code class="lang-javascript hljs"><span class="hljs-keyword">if</span> ( SOMETHING === <span class="hljs-number">1</span> ) {
+<span class="hljs-comment">// if SOMETHING is 1</span>
+}
+<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ( SOMETHING_ELSE === <span class="hljs-number">2</span> ) {
+<span class="hljs-comment">// if SOMETHING is 2</span>
+}
+<span class="hljs-keyword">else</span> {
+<span class="hljs-comment">// all other cases</span>
+}
+</code></pre>
+<h4 id="exercise-5-complete-the-grading-program">Exercise 5: Complete the grading program</h4>
+<p>Create two vars: </p>
+<pre><code class="lang-javascript hljs"><span class="hljs-comment">// should equal to a number that you set</span>
+<span class="hljs-keyword">var</span> grade; 
+<span class="hljs-comment">// should be set by logic, A, B, C, D, or F allowed</span>
+<span class="hljs-keyword">var</span> alphaGrade;
+</code></pre>
+<p>Write the if, if/else, and/or if/elseif/else statements needed to compute the alphaGrade for any valid grade.</p>
+<p>Think to yourself: what are the edge cases? How can this program be broken? If you have time, consider trying to account for these edge cases as well.</p>
+<h2 id="functions">Functions</h2>
+<hr>
+<p><strong>TBA</strong>: not enough time for this one class most likely</p>
+<h2 id="references">References</h2>
+<hr>
+<ol>
+<li><a href="https://web.stanford.edu/class/cs101/bits-bytes.html">Bits and Bytes</a></li>
+<li><a href="http://www.cs.utah.edu/~germain/PPS/Topics/memory_layout.html">Memory in a computer</a></li>
+<li><a href="http://www.cs.utah.edu/~germain/PPS/Topics/variables.html">Variables</a></li>
+<li><a href="http://programmers.stackexchange.com/questions/139747/what-is-meant-by-a-primitive-data-type">Primitives</a></li>
+<li><a href="https://javascriptweblog.wordpress.com/2010/09/27/the-secret-life-of-javascript-primitives/">JS Primitives</a></li>
+</ol>
+</div>
+
+<div class="ui container stackable grid main-content" style="margin-top:50px;" id="footer">
+    <div class="one column row">
+        <div class="column" style="font-size:16px;text-align: center;">
+            <div class="description">
+                <span>Built by your boy</span>
+                <strong>
+                    <a href="https://twitter.com/the_taqquikarim" target="_blank">Taq Karim</a>
+                </strong>
+                <span>with</span>
+                <strong>
+                    <a href="https://github.com/chjj/marked" target="_blank">marked.js</a>,
+                </strong>
+                <strong>
+                    <a href="https://highlightjs.org/" target="_blank">highlight.js</a>,
+                </strong>
+                <strong>pullups</strong>,
+                <strong>
+                    <a href="https://open.spotify.com/track/37zu8c48O3qVkkAlfaQzj1" target="_blank">BTS</a>,
+                </strong>
+                <span>and a</span>
+                <strong><a href="http://www.amazon.com/A-Heartbreaking-Work-Staggering-Genius/dp/0375725784/ref=cm_cr_pr_product_top?ie=UTF8" target="_blank">Heartbreaking Work of Staggering Genius</a></strong>.
+            </div>
+        </div>
+    </div>
+</div>
+            </div><!-- book__content -->
+        </div>
+    </div>
+
+    <script src='/javascript/libs/jquery.min.js'></script>
+    <script src="javascript/libs/highlight.min.js"></script>
+    <script src="/javascript/libs/marked.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+</body>
+</html>
